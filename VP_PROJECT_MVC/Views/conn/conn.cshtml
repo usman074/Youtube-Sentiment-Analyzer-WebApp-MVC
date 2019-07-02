@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Youtube Analysis";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>conn</h2>
+
+
+@using (Html.BeginForm("conn", "conn", FormMethod.Post))
+{
+    <label>Enter youtube video id</label><br />
+    <input type="text" name="value" /><br />
+    <input type="submit" name="btn" value="Comments Analysis" />
+} 
+@{
+    
+    if (ViewBag.newData != null)
+    {
+        <h4>Score</h4>
+        <h4>@ViewBag.score</h4>
+        <h4>Sadness</h4>
+        <h4>@ViewBag.sad</h4>
+        <h4>Joy</h4>
+        <h4>@ViewBag.joy</h4>
+        <h4>Fear</h4>
+        <h4>@ViewBag.fear</h4>
+        <h4>Disgust</h4>
+        <h4>@ViewBag.disgust</h4>
+        <h4>Anger</h4>
+        <h4>@ViewBag.anger</h4>
+        <h4>No. of Positve Comments</h4>
+        <h4>@ViewBag.positive</h4>
+        <h4>No. of Negative Comments</h4>
+        <h4>@ViewBag.negative</h4>
+        <h4>No. of Neutral Comments</h4>
+        <h4>@ViewBag.neutral</h4>
+    }
+       
+   
+}
+
+
